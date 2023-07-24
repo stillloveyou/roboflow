@@ -1,3 +1,6 @@
+# 프로젝트 명
+숫자야구 게임.
+
 # 프로그램 틀
 
 : class 세 개로 역할을 나누어 프로그램을 진행한다.
@@ -13,16 +16,19 @@
 
 ### Game class
 
-flag를 세워 false 값이 나올 때 까지 게임을 진행한다.
-false 값은 setRestratOrExit 함수에서 Exit 값 '2' 즉, '1' 값이 들어오지 않는다면 리턴된다.
+flag를 세워 특정 조건을 만족할 때까지 게임을 진행한다.
+
+flag의 false 값은 setRestratOrExit 함수에서 Exit 값 '2' 즉, '1' 값이 들어오지 않는다면 리턴된다.
+
 setRestratOrExit 함수는 restart 값인 '1'이 입력되면 computer 정답값을 초기화 하고 리턴시켜 gameStart 함수를 계속하여 진행하게 한다.
 
-restart, exit 값을 받는 함수 inputRestartOrExit 여기서 올바른 값이 들어왔는지 확인하는 함수 isRightAnswer
+restart, exit 값을 받는 함수 inputRestartOrExit, 여기서 올바른 값이 들어왔는지 확인하는 함수 isRightAnswer
+
 strike 와 ball 의 개수를 구하고 만일 정답일 때 setRestratOrExit 함수를 호출할 printHint 함수
 정답이 아닌 값이 들어왔을 때 한 게임의 값을 리턴해줄 makeHint 함수
 computer 의 정답과 player의 답을 비교하여 strike 와 ball의 개수를 구할 countStrike, countBall 함수
 
-물론 값을 받는 과정이므로 예외값은 항상 검사해주어야 한다.
+물론 console로 사용자의 값을 받는 과정이므로 예외값은 항상 검사해주어야 한다.
 
 ### Number class
 
